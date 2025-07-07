@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1f5;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 90%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background: #41f107;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>HomePage</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.user_name }}</td>
+                <td>{{ user.user_address }}</td>
+                <td>{{ user.user_contact }}</td>
+                <td>{{ user.user_email }}</td>
+                <td>{{ user.user_gender }}</td>
+                <td>{{ user.user_dob }}</td>
+                <td>{{ user.user_password }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
