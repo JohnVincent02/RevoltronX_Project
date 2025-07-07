@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1f5;
+            padding: 60px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: white;
+            background:  #fbb208;
+            padding: 12px 25px;
+            border-radius: 6px;
+        }
+        a:hover {
+            background:  #fbb208;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Index Page</p>
+
+    <a href="{% url 'Guest:user_register' %}">Register</a>
+    <a href="{% url 'Guest:login' %}">Login</a>
+
+</body>
+</html>

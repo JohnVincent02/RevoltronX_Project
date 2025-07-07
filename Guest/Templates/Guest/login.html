@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1f5;
+            padding: 60px;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background:  #fbb208;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #fbb208;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="user_email" placeholder="Email" required><br>
+        <input type="password" name="user_password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <p style="color:red;">{{ error }}</p>
+</body>
+</html>
